@@ -31,7 +31,7 @@ class EdificioSeeder extends Seeder
 		$a->tipoEdificio = $edificio['tipoEdificio'];
 		$a->anchura = $edificio['anchura'];
 		$a->altura = $edificio['altura'];
-		$a->fechaConstruccion = $edificio['fechaConstruccoin'];
+		$a->fechaConstruccion = $edificio['fechaConstruccion'];
 		$a->imagen = $edificio['imagen'];
 		$a->descripcion = $edificio['descripcion'];
     		$a->save();

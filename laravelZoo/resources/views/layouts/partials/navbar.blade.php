@@ -9,10 +9,10 @@
       {{--@if(Auth::check() )--}}
       
       <li class="nav-item">
-        <a href="{{route('edificios.index')}}" class="nav-link {{ request()->routeIs('edificios.*') && !request()->routeIs('edificios.create')? ' active' : ''}}">Listado de animales</a>
+        <a href="{{route('animales.index')}}" class="nav-link {{ request()->routeIs('animales.*') && !request()->routeIs('animales.create')? ' active' : ''}}">Listado de animales</a>
       </li>
       <li class="nav-item">
-        <a href="{{route('edificios.create')}}" class="nav-link {{ request()->routeIs('edificios.create')? ' active' : ''}}">Nuevo edificio</a>
+        <a href="{{route('animales.create')}}" class="nav-link {{ request()->routeIs('animales.create')? ' active' : ''}}">Nuevo animal</a>
       </li>
     </ul>
     {{--@endif --}}
