@@ -9,7 +9,7 @@
 	<div class="offset-md-3 col-md-6">
 		<div class="card">
 			<div class="card-header text-center">
-				Modificar animal
+				Modificar edificio
 			</div>
 			<div class="card-body" style="padding:30px">
 				{{-- TODO: Abrir el formulario e indicar el método POST --}}
@@ -24,11 +24,11 @@
 						<input class="form-control" type="text" name="tipoEdificio" value="{{$edificio->tipoEdificio}}"required="">
 					</div>
 					<div class="col form-group">
-						<label for="altura">Altura</label>
+						<label for="anchura">Anchura</label>
 						<input class="form-control" type="number" min="0" name="altura" value="{{$edificio->altura}}" required="">
 					</div>
 					<div class="col form-group">
-						<label for="anchura">Altura</label>
+						<label for="altura">Altura</label>
 						<input class="form-control" type="number" min="0" name="anchura" value="{{$edificio->anchura}}" required="">
 					</div>
 					<div class="col form-group">

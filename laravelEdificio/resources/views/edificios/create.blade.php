@@ -47,7 +47,7 @@
 					</div>
 					<div class="form-group text-center">
 						<button type="submit" class="btn btn-success" style="padding:8px 100px;margin-top:25px;">
-						Añadir animal </button>
+						Añadir Edificio </button>
 					</div>
 				</form>
 				{{-- TODO: Cerrar formulario --}}

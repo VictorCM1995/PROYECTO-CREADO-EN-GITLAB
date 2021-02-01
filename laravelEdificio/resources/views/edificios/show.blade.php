@@ -8,7 +8,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-3">
-			<img src="{{ asset("assets/imagenes/") }}/{{ $edificio["imagen"] }}" style="height:200px"/>
+			<img src="{{ asset('assets/imagenes') }}/{{ $edificio['imagen'] }}" style="height:200px"/>
 		</div>
 		<div class="col-sm-9">
 			<h1>{{ $edificio["nombre"] }} ({{ $edificio["fechaConstruccion"] }})</h1>
@@ -21,10 +21,7 @@
 			<h3>Revisiones</h3>
 				<div class="row col-8">
 					<div class="col">
-						<a href="" class="btn btn-warning">Editar</a>
-					</div>
-					<div class="col">
-						<a class="btn btn-success">Añadir revisión</a>
+						<a href="{{ route('edificios.edit' , $edificio) }}" class="btn btn-warning">Editar</a>
 					</div>
 					<div class="col">
 						<a href="{{ route('home') }}" class="btn btn-outline-success">Volver al listado</a>

@@ -9,10 +9,4 @@ class Edificio extends Model
 {
 	use HasFactory;
 	protected $table = "edificios";
-
-	public function getEdad()
-	{
-		$fechaFormateada=Carbon::parse($this->fechaConstruccion);
-		return $fechaFormateada->diffInYears(Carbon::now());
-	}
 }
