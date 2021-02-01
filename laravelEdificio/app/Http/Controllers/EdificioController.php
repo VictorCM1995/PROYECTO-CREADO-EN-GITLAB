@@ -29,4 +29,22 @@ class EdificioController extends Controller
 		$edificio = Edificio::find($id);
 		return view("edificios.edit", ["edificio" => $edificio]);
 	}
+
+	public function store(Request $request){
+		$a = new Edificio();
+		$a->nombre=$request->nombre;
+		$a->tipoEdificio=$request->tipoEdificio;
+		$a->anchura=$request->anchura;
+		$a->altura=$request->altura;
+		$a->fechaConstruccion=$request->fechaConstruccion;
+		$a->imagen=$request->imagen;
+		$a->descripcion=$request->descripcion;
+		return redirect()->action([AnimalController::class,'show']);
+	}
+
+	public function update(Request $request, $id){
+		$a = Animal::find($id);
+		$a->update($request->all());
+		return redirect()->action([EdificioController::class,'show']);
+	}
 }

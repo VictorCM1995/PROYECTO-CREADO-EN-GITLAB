@@ -27,3 +27,11 @@ Route::get('animales/{animal}', [AnimalController::class, 'show'])->name("animal
 Route::put('animales/{animal}', [AnimalController::class, 'update'])->name("animales.show");
 
 Route::get('animales/{animal}/editar', [AnimalController::class, 'edit'])->name("animales.edit");
+
+/*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+Route::get('admin/catalog',function(){})->middleware('auth');
+
+Route::get('profile', [ProfileController::class,'show'])->middleware('auth');*/

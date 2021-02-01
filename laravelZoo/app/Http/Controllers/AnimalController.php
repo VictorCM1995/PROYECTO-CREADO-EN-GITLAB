@@ -43,15 +43,8 @@ class AnimalController extends Controller
 	}
 
 	public function update(Request $request, $id){
-		$animal = Animal::findOrFail($id)
-		$animal->especie = $request->especie;
-		$animal->peso = $request->peso;
-		$animal->altura = $request->altura;
-		$animal->fechaNacimiento = $request->fechaNacimiento;
-		$animal->imagen = $request->imagen;
-		$animal->alimentacion = $request->alimentacion;
-		$animal->descripcion = $request->descripcion;
-		$animal->save();
-		return redirect()->action([AnimalController::class,'show'])->with("datos","Registro actualizado correctamente");
+		$a = Animal::find($id);
+		$a->update($request->all());
+		return redirect()->action([AnimalController::class,'show']);
 	}
 }

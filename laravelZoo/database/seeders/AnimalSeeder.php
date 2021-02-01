@@ -8,7 +8,8 @@ use App\Models\Animal;
 
 class AnimalSeeder extends Seeder
 {
-	private $animales = array(array('especie' => 'Bisonte','peso' => 1000,'altura' => 190,
+	private $animales = array(
+		array('especie' => 'Bisonte','peso' => 1000,'altura' => 190,
 			'fechaNacimiento' => '2014-09-07',
 			'imagen' => 'bisonte.jpg',
 			'alimentacion' => 'herbívoro',

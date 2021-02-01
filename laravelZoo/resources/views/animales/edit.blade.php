@@ -9,30 +9,28 @@
 	<div class="offset-md-3 col-md-6">
 		<div class="card">
 			<div class="card-header text-center">
-				Añadir animal
+				Modificar animal
 			</div>
 			<div class="card-body" style="padding:30px">
 				{{-- TODO: Abrir el formulario e indicar el método POST --}}
-				<form action="{{route('animales.update',$animal)}}">
-					@csrf
-					@method('put')
+				<form action="">
 					{{-- TODO: Protección contra CSRF --}}
 					<div class="form-group">
 						<label for="especie">Especie</label>
-						<input type="text" name="especie" id="especie" value="{{$animal->especie}}" class="form-control" required>
+						<input type="text" name="especie" id="especie" class="form-control" value="{{$animal->especie}}"required>
 					</div>
 					<div class="row">
 						<div class="col form-group">
 							<label for="peso">Peso</label>
-							<input class="form-control" type="number" min="0" value="{{$animal->peso}}" name="peso" required="">
+							<input class="form-control" type="number" min="0" name="peso" value="{{$animal->peso}}"required="">
 						</div>
 						<div class="col form-group">
 							<label for="altura">Altura</label>
-							<input class="form-control" type="number" min="0" value="{{$animal->altura}}" name="altura" required="">
+							<input class="form-control" type="number" min="0" name="altura" value="{{$animal->altura}}" required="">
 						</div>
 						<div class="col form-group">
 							<label for="fecha">Fecha de nacimiento</label>
-							<input class="form-control" required type="date" value="{{$animal->fechaNacimiento}}" name="fecha" required="">
+							<input class="form-control" required type="date" name="fecha" value="{{$animal->fechaNacimiento}}"required="">
 						</div>
 					</div>
 					<div class="row form-group">
@@ -64,7 +62,7 @@
 					</div>
 					<div class="form-group">
 						<label for="imagen">Elegir imagen</label>
-						<input class="form-control-file" type="file" id="img" value="{{$animal->imagen}}"name="imagen" accept="image/*">
+						<input class="form-control-file" type="file" id="img" name="imagen" accept="image/*">
 					</div>
 					<div class="form-group text-center">
 						<button type="submit" class="btn btn-success" style="padding:8px 100px;margin-top:25px;">
