@@ -39,7 +39,7 @@ class EdificioController extends Controller
 		$a->fechaConstruccion=$request->fechaConstruccion;
 		$a->imagen=$request->imagen;
 		$a->descripcion=$request->descripcion;
-		return redirect()->action([AnimalController::class,'show']);
+		return redirect()->action([EdificioController::class,'show']);
 	}
 
 	public function update(Request $request, $id){
