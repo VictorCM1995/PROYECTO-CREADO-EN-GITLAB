@@ -18,11 +18,7 @@
 			<p>{{ $edificio["altura"] }} m</p>
 			<h3>Descripción</h3>
 			<p>{{ $edificio["descripcion"] }}</p>
-			<h3>Revisiones</h3>
 				<div class="row col-8">
-					<div class="col">
-						<a href="{{ route('edificios.edit' , $edificio) }}" class="btn btn-warning">Editar</a>
-					</div>
 					<div class="col">
 						<a href="{{ route('home') }}" class="btn btn-outline-success">Volver al listado</a>
 					</div>
