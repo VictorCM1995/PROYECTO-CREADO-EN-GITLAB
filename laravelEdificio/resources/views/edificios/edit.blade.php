@@ -26,11 +26,11 @@
 						<input class="form-control" type="text" name="tipoEd" value="{{$edificio->tipoEd}}"required="">
 					</div>
 					<div class="col form-group">
-						<label for="anchura">Anchura</label>
+						<label for="anchura">Altura</label>
 						<input class="form-control" type="number" min="0" name="altura" value="{{$edificio->altura}}" required="">
 					</div>
 					<div class="col form-group">
-						<label for="altura">Altura</label>
+						<label for="altura">Anchura</label>
 						<input class="form-control" type="number" min="0" name="anchura" value="{{$edificio->anchura}}" required="">
 					</div>
 					<div class="col form-group">
