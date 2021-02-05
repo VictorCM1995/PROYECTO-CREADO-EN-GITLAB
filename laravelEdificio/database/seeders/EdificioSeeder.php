@@ -30,7 +30,7 @@ class EdificioSeeder extends Seeder
 			'tipoEd' => "Rascacielo",
 			'fecha' => '2011-01-01'),
 		array('nombre' => 'Obra',
-			'anchura' => 10,
+			'anchura' => 100,
 			'altura' => 300,
 			'imagen' => '4.jpg',
 			'descripcion' => 'Se desconoce el edificio que se esta construyendo',
