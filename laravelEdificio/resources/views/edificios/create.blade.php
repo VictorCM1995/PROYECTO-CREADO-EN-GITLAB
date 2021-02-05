@@ -13,16 +13,17 @@
 			</div>
 			<div class="card-body" style="padding:30px">
 				{{-- TODO: Abrir el formulario e indicar el método POST --}}
-				<form>
+				<form action="{{ route('edificios.store') }}" method="POST">
 					{{-- TODO: Protección contra CSRF --}}
+					@csrf
 					<div class="form-group">
 						<label for="nombre">Nombre</label>
 						<input type="text" name="nombre" id="nombre" class="form-control" required>
 					</div>
 					<div class="row">
 						<div class="col form-group">
-							<label for="tipoEdificio">Tipo de edificio</label>
-							<input class="form-control" type="text" required>
+							<label for="tipoEd">Tipo de edificio</label>
+							<input class="form-control" type="text" name="tipoEd" required>
 						</div>
 						<div class="col form-group">
 							<label for="anchura">Anchura</label>
@@ -34,7 +35,7 @@
 						</div>
 						<div class="col form-group">
 							<label for="fecha">Fecha de construccion</label>
-							<input class="form-control" required type="date" name="fecha" required>
+							<input class="form-control" type="date" name="fecha" required>
 						</div>
 					</div>
 					<div class="form-group">

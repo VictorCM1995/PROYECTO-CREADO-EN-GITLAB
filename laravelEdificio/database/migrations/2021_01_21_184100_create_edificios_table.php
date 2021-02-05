@@ -16,12 +16,12 @@ class CreateEdificiosTable extends Migration
         Schema::create('edificios', function (Blueprint $table) {
             $table->id();
             $table->string("nombre");
-	    $table->string("tipoEdificio");
             $table->double("anchura", 6, 1);
             $table->double("altura", 6, 1);
-            $table->date("fechaConstruccion");
             $table->string("imagen")->nullable();
             $table->longText("descripcion",20)->nullable();
+	    $table->string("tipoEd");
+	    $table->date("fecha");
             $table->timestamps();
         });
     }
