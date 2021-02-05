@@ -20,31 +20,39 @@ class EdificioController extends Controller
 	}
 
 	public function create()
-	{
+	{	
 		return view('edificios.create');
 	}
 
 	public function edit($id)
 	{
 		$edificio = Edificio::find($id);
-		return view("edificios.edit", ["edificio" => $edificio]);
+		return view("edificios.edit", ["edificio"=>$edificio]);
 	}
 
 	public function store(Request $request){
 		$a = new Edificio();
 		$a->nombre=$request->nombre;
-		$a->tipoEdificio=$request->tipoEdificio;
 		$a->anchura=$request->anchura;
 		$a->altura=$request->altura;
-		$a->fechaConstruccion=$request->fechaConstruccion;
 		$a->imagen=$request->imagen;
 		$a->descripcion=$request->descripcion;
-		return redirect()->action([EdificioController::class,'show']);
+		$a->tipoEd=$request->tipoEd;
+		$a->fecha=$request->fecha;
+		$a->save();
+		return redirect()->action([EdificioController::class,'index']);
 	}
 
 	public function update(Request $request, $id){
-		$a = Animal::find($id);
-		$a->update($request->all());
-		return redirect()->action([EdificioController::class,'show']);
+		$a = Edificio::find($id);
+		$a->nombre=$request->nombre;
+		$a->anchura=$request->anchura;
+		$a->altura=$request->altura;
+		$a->imagen=$request->imagen;
+		$a->descripcion=$request->descripcion;
+		$a->tipoEd=$request->tipoEd;
+		$a->fecha=$request->fecha;
+		$a->save();
+		return redirect()->action([EdificioController::class,'index']);
 	}
 }

@@ -9,54 +9,54 @@ class EdificioSeeder extends Seeder
 {
 	private $edificios = array(
 		array('nombre' => 'Rascacielos 1',
-			'tipoEdificio' => "Rascacielo",
 			'anchura' => 100,
 			'altura' => 200,
-			'fechaConstruccion' => '2010-12-11',
 			'imagen' => '1.jpg',
-			'descripcion' => 'Un rascacielos que provoca vertigo al estar en él'),
+			'descripcion' => 'Un rascacielos que provoca vertigo al estar en él',
+			'tipoEd' => "Rascacielo",
+			'fecha' => '2010-12-11'),
 		array('nombre' => 'Rascacielos 2',
-			'tipoEdificio' => "Rascacielo",
 			'anchura' => 120,
 			'altura' => 250,
-			'fechaConstruccion' => '2011-01-12',
 			'imagen' => '2.jpg',
-			'descripcion' => 'Un rascacielos que provoca vertigo y mareos al estar en él'),
+			'descripcion' => 'Un rascacielos que provoca vertigo y mareos al estar en él',
+			'tipoEd' => "Rascacielo",
+			'fecha' => '2011-01-12'),
 		array('nombre' => 'Rascacielo 3',
-			'tipoEdificio' => "Rascacielo",
 			'anchura' => 115,
 			'altura' => 235,
-			'fechaConstruccion' => '2011-01-01',
 			'imagen' => '3.jpg',
-			'descripcion' => 'Un rascacielos que provoca vertigo y mareos al estar en él. Adecuado para pilotos de avion'),
+			'descripcion' => 'Un rascacielos que provoca vertigo y mareos al estar en él. Adecuado para pilotos de avion',
+			'tipoEd' => "Rascacielo",
+			'fecha' => '2011-01-01'),
 		array('nombre' => 'Obra',
-			'tipoEdificio' => "Edificio",
 			'anchura' => 10,
 			'altura' => 300,
-			'fechaConstruccion' => '2010-12-12',
 			'imagen' => '4.jpg',
-			'descripcion' => 'Se desconoce el edificio que se esta construyendo'),
+			'descripcion' => 'Se desconoce el edificio que se esta construyendo',
+			'tipoEd' => "Edificio",
+			'fecha' => '2010-12-12'),
 		array('nombre' => 'Hospital',
-			'tipoEdificio' => "Hospital",
 			'anchura' => 200,
 			'altura' => 200,
-			'fechaConstruccion' => '2012-02-13',
 			'imagen' => '5.jpg',
-			'descripcion' => 'Esta UCI principal'),
+			'descripcion' => 'Esta UCI principal',
+			'tipoEd' => "Hospital",
+			'fecha' => '2012-02-13'),
 		array('nombre' => 'Museo de la Naturaleza',
-			'tipoEdificio' => "Museo",
 			'anchura' => 300,
 			'altura' => 300,
-			'fechaConstruccion' => '2012-03-03',
 			'imagen' => '6.jpg',
-			'descripcion' => 'Edificio que cuenta la fauna y flora de la region'),
+			'descripcion' => 'Edificio que cuenta la fauna y flora de la region',
+			'tipoEd' => "Museo",
+			'fecha' => '2012-03-03'),
 		array('nombre' => 'Edificio desconocido',
-			'tipoEdificio' => "Desconocido",
 			'anchura' => 100,
 			'altura' => 300,
-			'fechaConstruccion' => '2012-04-04',
 			'imagen' => '7.jpg',
-			'descripcion' => 'Se desconocen los datos de este edificio, insuficiente informacion')
+			'descripcion' => 'Se desconocen los datos de este edificio, insuficiente informacion',
+			'tipoEd' => "Desconocido",
+			'fecha' => '2012-04-04')
 		
 	);
     /**
@@ -70,12 +70,12 @@ class EdificioSeeder extends Seeder
     	{
     		$a = new Edificio();
     		$a->nombre = $edificio['nombre'];
-    		$a->tipoEdificio = $edificio['tipoEdificio'];
     		$a->anchura = $edificio['anchura'];
     		$a->altura = $edificio['altura'];
-    		$a->fechaConstruccion = $edificio['fechaConstruccion'];
     		$a->imagen = $edificio['imagen'];
     		$a->descripcion = $edificio['descripcion'];
+		$a->tipoEd = $edificio['tipoEd'];
+		$a->fecha = $edificio['fecha'];
     		$a->save();
     	}
     	$this->command->info('Tabla edificio inicializada con datos');
